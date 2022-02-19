@@ -18,9 +18,10 @@
   }
 }
 
+
 // Миксин для текста
 
-@mixin text($fs: 14px, $fw: 500, $lh: 25px, $ls: 0.02em) {
+@mixin text($fs:14px, $fw:500, $lh:25px, $ls:0.02em) {
   font-size: $fs;
   font-weight: $fw;
   line-height: ($lh / $fs);
