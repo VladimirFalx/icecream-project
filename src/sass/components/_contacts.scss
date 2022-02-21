@@ -1,29 +1,31 @@
-body {
-  font-family: DM Sans sans-serif;
-  font-style: normal;
-}
-
 .contacts {
   background-color: #fff5f6;
+  @include font;
 }
 
 .container {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  .container {
+  @include tab {
     width: 768px;
   }
 }
 
-@media (min-width: 768px) {
-  .contacts__wrap {
+.contacts__wrap {
+  @include tab {
     display: flex;
     width: 768px;
     margin: 0 auto;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  @include desk {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 115px;
+    padding-right: 115px;
   }
 }
 
@@ -33,102 +35,148 @@ body {
   background: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-
   width: 220px;
+  @include desk {
+    width: 330px;
+  }
 }
 
 .contacts__card {
-  padding-top: 43px;
-  padding-bottom: 43px;
+  padding: 43px 20px;
   margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-  .contacts__card {
+  @include tab {
     margin-bottom: 0;
+    padding: 50px 32px;
+  }
+  @include desk {
+    padding: 51px 53px 62px 43px;
   }
 }
 
 .contacts__title {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
+  @include text(12px, null, 22px, 0.04em);
 
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  letter-spacing: 0.04em;
   color: #ffffff;
-
   background-color: #f0d1a5;
   border-radius: 4px;
-
   width: 80px;
   height: 16px;
+  margin-top: 0;
   margin-bottom: 25px;
+  @include tab {
+    width: 73px;
+    height: 28px;
+    @include text(16px, null, 30px, 0.04em);
+  }
 }
 
 .truck {
   background-color: #c2e297;
   width: 130px;
+  @include tab {
+    width: 138px;
+  }
 }
 
 .location__city {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
-  letter-spacing: 0.04em;
+  @include text(12px, null, 26px, 0.04em);
   color: #000000;
   margin-bottom: 10px;
+  @include tab {
+    @include text(14px, null, 26px, 0.04em);
+  }
+  @include desk {
+    @include text(16px, null, 30px, 0.04em);
+  }
 }
 
 .location__text {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
+  @include text(12px, null, 23px);
   color: #907e82;
   margin-bottom: 25px;
+  @include tab {
+    margin-bottom: 30px;
+    @include text(14px, null, 23px);
+  }
+  @include desk {
+    @include text(16px, null, 29px, 0.04em);
+    margin-bottom: 32px;
+  }
 }
 
 .contacts__location {
   border-bottom: 1px solid #e1e1e1;
   margin-bottom: 25px;
+  @include tab {
+    margin-bottom: 30px;
+  }
+  @include desk {
+    margin-bottom: 32px;
+  }
 }
 
 .week__day {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
+  @include text(12px, null, 22px);
   color: #000000;
+  @include tab {
+    @include text(14px, null, 26px);
+  }
+  @include desk {
+    @include text(16px, null, 30px, 0.04em);
+  }
 }
 
 .week__time {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
+  @include text(12px, null, 22px);
   color: #ffa5ba;
+  margin-top: 0;
   margin-bottom: 25px;
-}
-
-.week__time:not(:last-child) {
-  margin-bottom: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  @include tab {
+    @include text(14px, null, 26px);
+    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  @include desk {
+    @include text(16px, null, 30px);
+    margin-bottom: 32px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .contacts__week {
   border-bottom: 1px solid #e1e1e1;
   margin-bottom: 25px;
+  @include tab {
+    margin-bottom: 30px;
+  }
+  @include desk {
+    margin-bottom: 32px;
+  }
 }
 
 .conection__link {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
+  @include text(12px, null, 18px);
   color: #907e82;
-}
-
-.conection__link:not(:last-child) {
-  margin-bottom: 5px;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  @include tab {
+    @include text(14px, null, 26px);
+  }
+  @include desk {
+    @include text(16px, null, 29px);
+  }
 }
 
 .contacts__btn {
@@ -136,7 +184,6 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
-
   background-color: #fff;
   border-radius: 22px;
   margin: 0 auto;
@@ -145,43 +192,56 @@ body {
   margin-bottom: 10px;
   padding-left: 17px;
   padding-right: 17px;
-}
-
-@media (min-width: 768px) {
-  .contacts__btn--wrap {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  &:hover,
+  &:focus {
+    background-color: #d41342;
   }
-  .contacts__btn {
+  &:hover span,
+  &:focus span {
+    color: #fff;
+  }
+  &:hover .contacts__btn--icons,
+  &:focus .contacts__btn--icons {
+    fill: #ffffff;
+  }
+  @include tab {
     margin: 0;
     padding: 0;
     margin-right: 15px;
+    width: 192px;
+  }
+  @include desk {
+    width: 198px;
+  }
+}
+
+.contacts__franchise {
+  @include tab {
+    width: 175px;
+  }
+  @include desk {
+    width: 180px;
   }
 }
 
 .contacts__btn--wrap {
   margin-top: 54px;
-}
-
-@media (min-width: 768px) {
-  .contacts__btn--wrap {
+  @include tab {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     margin-top: 81px;
   }
 }
 
 .contacts__btn--text {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.31;
+  @include text(16px, bold, 21px);
   color: #d41443;
   margin-right: 8px;
-}
-
-.contacts__btn:hover span,
-.contacts__btn:focus span {
-  color: #fff;
+  @include tab {
+    margin-right: 14px;
+  }
 }
 
 .contacts__btn--icons {
@@ -192,16 +252,8 @@ body {
   align-items: center;
   text-align: center;
 }
-.contacts__btn .contacts__btn--icons {
-  fill: #d41342;
-}
 
 .contacts__btn:hover .contacts__btn--icons,
 .contacts__btn:focus .contacts__btn--icons {
   fill: #ffffff;
-}
-
-.contacts__btn:hover,
-.contacts__btn:focus {
-  background-color: #d41342;
 }
