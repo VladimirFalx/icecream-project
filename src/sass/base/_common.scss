@@ -4,9 +4,15 @@ body {
 
 .container {
   width: 100%;
-  max-width: 480px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+@media (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 @media (min-width: 768px) {
