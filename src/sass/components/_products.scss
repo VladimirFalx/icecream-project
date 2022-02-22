@@ -1,0 +1,50 @@
+.products {
+  padding-top: 121px;
+  padding-bottom: 80px;
+  background-color: $mainBgcolor;
+  @include tab {
+    padding-top: 122px;
+    padding-bottom: 119px;
+  }
+  @include desk {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+
+  &__sub-title {
+    @include text(18px, 400, 21px, 0);
+    text-align: center;
+    color: $thirdColor;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @include tab {
+      font-size: 26px;
+      line-height: calc(30 / 26);
+    }
+    @include desk {
+      font-size: 30px;
+      line-height: calc(34 / 30);
+      letter-spacing: 0.04em;
+    }
+  }
+  &__title {
+    @include text(34px, 400, 39px, 0.04em);
+    text-align: center;
+    text-transform: uppercase;
+    color: $fourthColor;
+    margin-bottom: 144px;
+    @include tab {
+      font-size: 48px;
+      line-height: calc(55 / 48);
+      margin-bottom: 150px;
+    }
+    @include desk {
+      font-size: 58px;
+      line-height: calc(66 / 58);
+      letter-spacing: 0.06em;
+      margin-bottom: 259px;
+    }
+  }
+  &__list {
+  }
+}
