@@ -7,4 +7,13 @@
 @import './utils/mixin';
 @import './utils/hidden';
 
-@import './components/_contacts.scss';
+//COMPONENTS
+
+@import './components/header';
+@import './components/about';
+@import './components/advantages';
+@import './components/gallery';
+@import './components/reviews';
+@import './components/contacts';
+@import './components/footer';
+@import './components/mobile-menu';

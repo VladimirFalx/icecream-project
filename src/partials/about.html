@@ -1,19 +1,36 @@
-<section class="section__about">
+<section class="section-about">
+    <p class="section-about__pre-header">tradition and love</p>
+    <h2 class="section-about__heading">how it’s made?</h2>
     <div class="about container">
-        <label class="about__label" for="about-heading">tradition and love</label>
-        <h2 class="about__heading" id="about-heading">how it’s made?</h2>
-        <picture>
-            <source>
-            <source>
-            <source>
-            <img src="./images/about/desktop-cow.png" alt="cow">
+        <picture class="about__image" >
+            <source media="(min-width: 1280px)" srcset="
+                                    ./images/about/desktop-cow.png    1x,
+                                    ./images/about/desktop-cow-2x.png 2x
+                                  " />
+            <source media="(min-width: 768px)" srcset="
+                                    ./images/about/tablet-cow.png    1x,
+                                    ./images/about/tablet-cow-2x.png 2x
+                                  " />
+        
+            <img class="about__image-img" srcset="
+                                    ./images/about/mobile-cow.png    1x,
+                                    ./images/about/mobile-cow-2x.png 2x
+                                  " src="./images/about/mobile-cow.png" alt="cow" />
         </picture>
-        <p class="about__text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros.
-        Maecenas eleifend erat at justo fringilla.</p>
-        <p class="about__text about__text--lite">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat.
-        Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
-</p>
-        <p class="about__text about__text--lite about__text--margin">Aliquam erat volutpat. Aenean accumsan.</p>
-        <button type="button">Read more</button>
+        <div class="about__info-box">
+            <p class="about__text">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem
+                eget, egestas eros.
+                Maecenas eleifend erat at justo fringilla.</p>
+            <p class="about__text about__text--lite">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris
+                rhoncus orci in imperdiet placerat.
+                Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
+            </p>
+            <p class="about__text about__text--lite about__text--margin">Aliquam erat volutpat. Aenean accumsan.</p>
+            <button class="about__button" type="button">Read more
+                <svg class="about__button-svg" width="10px" height="10px">
+                    <use href="./images/svg/sprite.svg#icon-arrow-right-button"></use>
+                </svg>
+            </button>
+        </div>
     </div>
 </section>
