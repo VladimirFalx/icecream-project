@@ -1,0 +1,105 @@
+.advantages {
+  width: 100vw;
+  padding: 105px 0 145px;
+  background-color: #fff5f6;
+
+  &__card {
+    position: relative;
+    width: 230px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 104px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    transform: translateY(-100%);
+    top: -16px;
+    max-width: 50px;
+    max-height: 50px;
+
+    &--narrow {
+      left: -12px;
+    }
+  }
+
+  &__header {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    @include text(36px, 400, 41px, 0.04em);
+    color: $fourthColor;
+  }
+
+  &__text {
+    display: block;
+    margin: 0;
+    padding: 0;
+    @include font;
+    @include text(12px, 700, 20px, 0);
+    color: $secondaryColor;
+  }
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    padding: 152px 0 246px;
+
+    &__container {
+      display: flex;
+    }
+
+    &__card {
+      width: 180px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 0;
+        margin-right: 60px;
+      }
+    }
+    &__icon {
+      top: -36px;
+    }
+
+    &__header {
+      margin-bottom: 13px;
+      @include text(48px, 400, 55px, 0.04em);
+    }
+
+    &__text {
+      @include text(14px, 700, 24px, 0);
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .advantages {
+    padding: 64px 0 310px;
+
+    &__container {
+      justify-content: space-between;
+    }
+
+    &__card {
+      width: 330px;
+
+      &:not(:last-of-type) {
+        margin-right: 30px;
+      }
+    }
+    &__icon {
+      top: -40px;
+    }
+
+    &__header {
+      margin-bottom: 15px;
+      @include text(58px, 400, 66px, 0.04em);
+    }
+
+    &__text {
+      @include text(16px, 700, 28px, 0);
+    }
+  }
+}
