@@ -1,0 +1,60 @@
+.header {
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  padding-top: 6px;
+  @include tab {
+    padding-top: 37px;
+    align-items: center;
+  }
+}
+
+.header-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  @include desk {
+    padding-left: 46px;
+  }
+}
+
+.nav__burger {
+  margin-left: auto;
+
+  @include tab {
+    margin-left: 291px;
+  }
+  @include desk {
+    display: none;
+  }
+}
+
+.nav__list {
+  display: none;
+  @include desk {
+    display: flex;
+    margin-left: 110px;
+  }
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.nav__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.31;
+  color: #ffffff;
+  font-family: DM Sans;
+  transition-property: color;
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $fourthColor;
+  }
+}
