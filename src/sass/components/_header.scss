@@ -1,0 +1,167 @@
+.nav {
+  display: flex;
+  padding-top: 6px;
+  @include tab {
+    padding-top: 37px;
+    align-items: center;
+  }
+}
+
+.header-container {
+  background-color: #ffb8ca;
+  @include desk {
+    padding-left: 46px;
+  }
+}
+
+.nav__burger {
+  margin-left: auto;
+  background-color: #ffb8ca;
+  @include tab {
+    margin-left: 291px;
+  }
+  @include desk {
+    display: none;
+  }
+}
+
+.mob-menu {
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e17992;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.mob-menu__close {
+  background-color: #e17992;
+}
+
+.mob-menu__btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #e17992;
+}
+
+.is-hidden {
+  position: relative;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mob-menu__links {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.mob-menu__btn {
+  padding: 0 20px;
+  position: relative;
+  width: 209px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #ffffff;
+  color: $fourthColor;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.31;
+  font-family: DM Sans;
+  margin-bottom: 19px;
+}
+
+.tab-menu__btn {
+  display: none;
+  padding: 0 20px;
+  position: relative;
+  width: 160px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #ffffff;
+  color: $fourthColor;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.31;
+  font-family: DM Sans;
+  margin-left: 30px;
+  @include tab {
+    display: block;
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+  }
+  @include desk {
+    margin-left: auto;
+  }
+}
+
+.mob-menu__arrow-icon {
+  fill: $fourthColor;
+  position: absolute;
+  top: 19px;
+  right: 48px;
+}
+
+.tab-menu__arrow-icon {
+  fill: $fourthColor;
+  position: absolute;
+  top: 19px;
+  right: 26px;
+}
+
+.mob-menu__list {
+  text-align: start;
+  border-top: 1px solid #e18298;
+  border-bottom: 1px solid #e18298;
+}
+
+.mob-menu__link {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.28;
+  font-family: DM Sans;
+  color: #ffffff;
+  &:hover,
+  &:focus {
+    color: $fourthColor;
+  }
+}
+
+.mob-menu__item {
+  padding: 0 20px;
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  &:not(:last-child) {
+    border-bottom: 1px solid #e18298;
+  }
+}
+
+.nav__list {
+  display: none;
+  @include desk {
+    display: flex;
+    margin-left: 110px;
+  }
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.nav__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.31;
+  color: #ffffff;
+  font-family: DM Sans;
+  &:hover,
+  &:focus {
+    color: $fourthColor;
+  }
+}
