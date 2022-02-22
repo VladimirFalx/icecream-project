@@ -69,6 +69,10 @@ textarea {
   overflow: hidden;
 }
 
+.header {
+  position: fixed;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
