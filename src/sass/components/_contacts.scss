@@ -1,0 +1,280 @@
+.contacts {
+  @include font;
+  background-color: #fff5f6;
+  @include desk {
+    background-image: url('../images/contacts-webp/contacts-bg.webp');
+    background-repeat: no-repeat;
+    background-size: common;
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url ('../images/contacts-webp/contacts-bg-2x.webp');
+    }
+  }
+}
+
+.contacts__container {
+  position: relative;
+  top: -84px;
+  @include tab {
+    display: flex;
+    width: 768px;
+    margin: 0 auto;
+    position: relative;
+    top: -78px;
+  }
+  @include desk {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    top: -102px;
+  }
+}
+
+.contacts__card {
+  display: block;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  width: 220px;
+  padding: 43px 20px;
+  margin-bottom: 20px;
+  @include tab {
+    margin-bottom: 0;
+    padding: 50px 32px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  @include desk {
+    width: 330px;
+    padding: 51px 53px 62px 43px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.contacts__title {
+  @include text(12px, null, 22px, 0.04em);
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #f0d1a5;
+  border-radius: 4px;
+  width: 80px;
+  height: 16px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  @include tab {
+    width: 73px;
+    height: 28px;
+    @include text(16px, null, 30px, 0.04em);
+  }
+}
+
+.contacts__truck {
+  background-color: #c2e297;
+  width: 130px;
+  @include tab {
+    width: 138px;
+  }
+}
+
+.location__city {
+  @include text(12px, null, 26px, 0.04em);
+  color: #000000;
+  margin-bottom: 10px;
+  @include tab {
+    @include text(14px, null, 26px, 0.04em);
+  }
+  @include desk {
+    @include text(16px, null, 30px, 0.04em);
+  }
+}
+
+.location__text {
+  @include text(12px, null, 23px);
+  color: #907e82;
+  margin-bottom: 25px;
+  @include tab {
+    margin-bottom: 30px;
+    @include text(14px, null, 23px);
+  }
+  @include desk {
+    @include text(16px, null, 29px, 0.04em);
+    margin-bottom: 32px;
+  }
+}
+
+.contacts__location {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 25px;
+  @include tab {
+    margin-bottom: 30px;
+  }
+  @include desk {
+    margin-bottom: 32px;
+  }
+}
+
+.week__day {
+  @include text(12px, null, 22px);
+  color: #000000;
+  @include tab {
+    @include text(14px, null, 26px);
+  }
+  @include desk {
+    @include text(16px, null, 30px, 0.04em);
+  }
+}
+
+.week__time {
+  @include text(12px, null, 22px);
+  color: #ffa5ba;
+  margin-top: 0;
+  margin-bottom: 25px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  @include tab {
+    @include text(14px, null, 26px);
+    margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  @include desk {
+    @include text(16px, null, 30px);
+    margin-bottom: 32px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.contacts__week {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 25px;
+  @include tab {
+    margin-bottom: 30px;
+  }
+  @include desk {
+    margin-bottom: 32px;
+  }
+}
+
+.conection__link {
+  @include text(12px, null, 18px);
+  color: #907e82;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  @include tab {
+    @include text(14px, null, 26px);
+  }
+  @include desk {
+    @include text(16px, null, 29px);
+  }
+}
+
+.contacts__btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 22px;
+  margin: 0 auto;
+  width: 162px;
+  height: 44px;
+
+  padding-left: 16px;
+  padding-right: 17px;
+
+  @include animation;
+  &:hover,
+  &:focus {
+    background-color: #d41342;
+  }
+  &:hover span,
+  &:focus span {
+    color: #fff;
+  }
+  &:hover .contacts__btn--icons,
+  &:focus .contacts__btn--icons {
+    fill: #ffffff;
+  }
+
+  @include tab {
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+    width: 192px;
+  }
+  @include desk {
+    width: 198px;
+  }
+
+  @media (max-width: 767px) {
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.contacts__franchise {
+  @include tab {
+    width: 175px;
+  }
+  @include desk {
+    width: 180px;
+  }
+}
+
+.contacts__btn--wrap {
+  margin-top: 54px;
+  position: relative;
+  top: -84px;
+  @include tab {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 81px;
+    top: -78px;
+  }
+  @include desk {
+    margin-top: 86px;
+    top: -102px;
+  }
+}
+
+.contacts__btn--text {
+  @include text(16px, bold, 21px);
+  color: #d41443;
+  margin-right: 8px;
+  @include tab {
+    margin-right: 14px;
+  }
+}
+
+.contacts__btn--icons {
+  width: 8px;
+  height: 8px;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  @include desk {
+    margin-top: 2px;
+  }
+}
+
+.contacts__btn:hover .contacts__btn--icons,
+.contacts__btn:focus .contacts__btn--icons {
+  fill: #ffffff;
+}
