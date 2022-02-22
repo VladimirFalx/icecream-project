@@ -37,5 +37,16 @@
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $('.slider').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnFocus: true,
+        pauseOnHover: true,
+      });
+    </script>
   </body>
 </html>
