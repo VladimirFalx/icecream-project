@@ -5,7 +5,7 @@ p {
 .hero {
   margin: 0 auto;
 
-  background-color: #ffb8ca;
+  background-color: $firstProduct;
 
   &__container {
     position: relative;
@@ -13,9 +13,13 @@ p {
     padding-bottom: 75px;
     overflow: hidden;
 
-    @media (min-width: 768px) {
+    @include tab {
       padding-top: 31px;
       padding-bottom: 46px;
+    }
+    @include desk {
+      padding-top: 52px;
+      padding-bottom: 75px;
     }
   }
 }
@@ -27,30 +31,33 @@ p {
   width: 218px;
   z-index: 2;
 
-  @media (min-width: 768px) {
+  @include tab {
     top: 102px;
     left: 34px;
+    width: 162px;
   }
 
-  @media (min-width: 1280px) {
+  @include desk {
     top: 171px;
     left: 116px;
+    width: 277px;
   }
 }
 
 .hero__slogan {
-  margin: 0;
   margin-bottom: 19px;
   @include text(26px, 400, 30px, 0.04);
   text-transform: uppercase;
   color: #fff;
 
-  @media (min-width: 768px) {
+  @include tab {
     @include text(22px, 400, 25px, 0.04em);
+    margin-bottom: 20px;
   }
 
-  @media (min-width: 1280px) {
+  @include desk {
     @include text(38px, 400, 44px, 0.04em);
+    margin-bottom: 25px;
   }
 }
 
@@ -58,11 +65,11 @@ p {
   @include text(48px, 400, 46px, 0);
   color: #d41443;
 
-  @media (min-width: 768px) {
+  @include tab {
     @include text(34px, 400, 31px, 0.04);
   }
 
-  @media (min-width: 1280px) {
+  @include desk {
     @include text(58px, 400, 52px, 0.04);
   }
 }
@@ -81,33 +88,53 @@ p {
   @include font;
   @include text(8px, 400, 10px);
   border-radius: 20px;
+  @include desk {
+    font-size: 14px;
+    line-height: 1.3;
+    padding: 11px 18px;
+  }
 
   &--red {
     background-color: #d41443;
     color: #fff;
+    @include desk {
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+    &:hover {
+      background-color: #c7133e;
+    }
   }
 
   &--white {
     background-color: #fff;
     color: #d41443;
+    &:hover {
+      background-color: #ecebeb;
+    }
   }
 }
 
 .store {
   display: none;
 
-  @media (min-width: 768px) {
+  @include tab {
     position: absolute;
     display: block;
-    width: 114px;
-    right: 0px;
+    right: 34px;
     top: 94px;
   }
 
-  @media (min-width: 1280px) {
+  @include desk {
     width: 92px;
-    right: -18px;
+    height: 168px;
+    right: 57px;
     top: 156px;
+  }
+  &__list {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
@@ -119,8 +146,9 @@ p {
   &:not(:last-of-type) {
     margin-bottom: 13px;
 
-    @media (min-width: 1280px) {
+    @include desk {
       margin-bottom: 15px;
+      height: 77px;
     }
   }
 }
@@ -132,10 +160,10 @@ p {
   @include text(28px, 400, 32px, 0.04em);
   color: #d41443;
 
-  @media (min-width: 1280px) {
-    width: 92px;
-    right: -18px;
-    top: 156px;
+  @include desk {
+    width: 100%;
+    left: -18px;
+    top: 4px;
     @include text(46px, 400, 53px, 0.04em);
   }
 }
@@ -151,8 +179,9 @@ p {
   @include text(8px, 400, 10px);
   color: #fff;
 
-  @media (min-width: 1280px) {
+  @include desk {
     width: 92px;
+    top: 59px;
     right: 18px;
     @include text(14px, 400, 18px);
   }
@@ -161,11 +190,16 @@ p {
 .store__circle {
   position: absolute;
   right: 0;
+  top: 0;
   width: 16px;
   height: 16px;
   background-color: #fff;
   border-radius: 50%;
   z-index: 1;
+  @include desk {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .hero__descr {
@@ -192,7 +226,11 @@ p {
 .hero__text {
   @include font;
   @include text(8px, 400, 12px);
-  color: #fff;
+  color: $primaryColor;
+  @include desk {
+    font-size: 14px;
+    line-height: 1.4;
+  }
 }
 
 .hero__more {
@@ -216,58 +254,70 @@ p {
   width: 345px;
   height: 345px;
 
-  margin-left: 16px;
+  margin-left: 11.25%;
   border-radius: 50%;
   background-color: #ffa5ba;
-
-  @media (min-width: 768px) {
-    margin-left: 262px;
+  @include tab {
+    margin-left: 39%;
     width: 323px;
     height: 323px;
+  }
+  @include desk {
+    width: 538px;
+    height: 538px;
+    margin-left: 40.2%;
   }
 }
 
 .picture__main {
   position: absolute;
   bottom: 0;
-  left: 97px;
+  left: 36.5%;
   width: 171px;
   height: auto;
   transition-property: transform;
   transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include tab {
+    width: 143px;
+    left: 378px;
+  }
+  @include desk {
+    width: 236px;
+    left: 634px;
+  }
 
   &:hover {
     transform: scale(120%);
-  }
-
-  @media (min-width: 768px) {
-    left: 344px;
-    width: 143px;
   }
 }
 
 .picture__milk {
   display: none;
 
-  @media (min-width: 768px) {
+  @include tab {
     display: block;
     width: 124px;
     height: auto;
     position: absolute;
     bottom: 28px;
+    left: 34px;
     transition-property: transform;
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover {
-      transform: scale(120%);
-    }
+  }
+  @include desk {
+    width: 188px;
+    left: 77px;
+    bottom: 45px;
+  }
+  &:hover {
+    transform: scale(120%);
   }
 }
 
 .picture__girl {
   display: none;
 
-  @media (min-width: 768px) {
+  @include tab {
     display: block;
     width: 168px;
     height: auto;
@@ -276,9 +326,11 @@ p {
     right: 34px;
     transition-property: transform;
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover {
-      transform: scale(120%);
-    }
+  }
+  @include desk {
+    width: 293px;
+  }
+  &:hover {
+    transform: scale(120%);
   }
 }
