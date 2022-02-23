@@ -17,6 +17,11 @@ p {
       padding-top: 31px;
       padding-bottom: 46px;
     }
+
+    @media (min-width: 1280px) {
+      padding-top: 52px;
+      padding-bottom: 75px;
+    }
   }
 }
 
@@ -35,6 +40,7 @@ p {
   @media (min-width: 1280px) {
     top: 171px;
     left: 116px;
+    width: 277px;
   }
 }
 
@@ -90,6 +96,10 @@ p {
   &--white {
     background-color: #fff;
     color: #d41443;
+  }
+
+  @media (min-width: 1280px) {
+    @include text(14px, 400, 18px);
   }
 }
 
@@ -193,6 +203,10 @@ p {
   @include font;
   @include text(8px, 400, 12px);
   color: #fff;
+
+  @media (min-width: 1280px) {
+    @include text(14px, 400, 20px);
+  }
 }
 
 .hero__more {
@@ -204,6 +218,10 @@ p {
   background-color: #fff;
   border-radius: 50%;
   margin-top: 7px;
+
+  @media (min-width: 1280px) {
+    margin-top: 20px;
+  }
 }
 
 .hero__icon {
@@ -225,6 +243,12 @@ p {
     width: 323px;
     height: 323px;
   }
+
+  @media (min-width: 1280px) {
+    margin-left: 360px;
+    width: 538px;
+    height: 538px;
+  }
 }
 
 .picture__main {
@@ -244,6 +268,11 @@ p {
     left: 344px;
     width: 143px;
   }
+
+  @media (min-width: 1280px) {
+    left: 594px;
+    width: 236px;
+  }
 }
 
 .picture__milk {
@@ -261,6 +290,12 @@ p {
     &:hover {
       transform: scale(120%);
     }
+  }
+
+  @media (min-width: 1280px) {
+    left: 77px;
+    bottom: 45px;
+    width: 188px;
   }
 }
 
@@ -280,5 +315,10 @@ p {
     &:hover {
       transform: scale(120%);
     }
+  }
+
+  @media (min-width: 1280px) {
+    right: 115px;
+    width: 293px;
   }
 }
