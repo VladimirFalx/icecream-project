@@ -191,22 +191,26 @@
   margin: 0 auto;
   width: 162px;
   height: 44px;
-
   padding-left: 16px;
   padding-right: 17px;
+  @include text(16px, 700, 21px);
+  color: #d41443;
+
+  .contacts__btn--text {
+    margin-right: 8px;
+    @include tab {
+      margin-right: 14px;
+    }
+  }
 
   @include animation;
   &:hover,
   &:focus {
     background-color: #d41342;
   }
-  &:hover span,
-  &:focus span {
+  &:hover,
+  &:focus {
     color: #fff;
-  }
-  &:hover .contacts__btn--icons,
-  &:focus .contacts__btn--icons {
-    fill: #ffffff;
   }
 
   @include tab {
@@ -224,6 +228,12 @@
       margin-bottom: 10px;
     }
   }
+}
+
+.contacts__btn--icons {
+  width: 20px;
+  height: auto;
+  fill: currentColor;
 }
 
 .contacts__franchise {
@@ -251,30 +261,4 @@
     margin-top: 86px;
     top: -102px;
   }
-}
-
-.contacts__btn--text {
-  @include text(16px, bold, 21px);
-  color: #d41443;
-  margin-right: 8px;
-  @include tab {
-    margin-right: 14px;
-  }
-}
-
-.contacts__btn--icons {
-  width: 8px;
-  height: 8px;
-  margin-top: 3px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  @include desk {
-    margin-top: 2px;
-  }
-}
-
-.contacts__btn:hover .contacts__btn--icons,
-.contacts__btn:focus .contacts__btn--icons {
-  fill: #ffffff;
 }
