@@ -31,6 +31,11 @@ p {
     top: 102px;
     left: 34px;
   }
+
+  @media (min-width: 1280px) {
+    top: 171px;
+    left: 116px;
+  }
 }
 
 .hero__slogan {
@@ -41,7 +46,11 @@ p {
   color: #fff;
 
   @media (min-width: 768px) {
-    @include text(22px, 400, 25px, 0.04);
+    @include text(22px, 400, 25px, 0.04em);
+  }
+
+  @media (min-width: 1280px) {
+    @include text(38px, 400, 44px, 0.04em);
   }
 }
 
@@ -51,6 +60,10 @@ p {
 
   @media (min-width: 768px) {
     @include text(34px, 400, 31px, 0.04);
+  }
+
+  @media (min-width: 1280px) {
+    @include text(58px, 400, 52px, 0.04);
   }
 }
 
@@ -90,6 +103,12 @@ p {
     right: 0px;
     top: 94px;
   }
+
+  @media (min-width: 1280px) {
+    width: 92px;
+    right: -18px;
+    top: 156px;
+  }
 }
 
 .store__item {
@@ -99,6 +118,10 @@ p {
 
   &:not(:last-of-type) {
     margin-bottom: 13px;
+
+    @media (min-width: 1280px) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -108,6 +131,13 @@ p {
   z-index: 2;
   @include text(28px, 400, 32px, 0.04em);
   color: #d41443;
+
+  @media (min-width: 1280px) {
+    width: 92px;
+    right: -18px;
+    top: 156px;
+    @include text(46px, 400, 53px, 0.04em);
+  }
 }
 
 .store__type {
@@ -120,6 +150,12 @@ p {
   @include font;
   @include text(8px, 400, 10px);
   color: #fff;
+
+  @media (min-width: 1280px) {
+    width: 92px;
+    right: 18px;
+    @include text(14px, 400, 18px);
+  }
 }
 
 .store__circle {
@@ -142,6 +178,14 @@ p {
     width: 114px;
     left: 154px;
     bottom: 46px;
+  }
+  @media (min-width: 1280px) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    left: 295px;
+    bottom: 56px;
   }
 }
 
