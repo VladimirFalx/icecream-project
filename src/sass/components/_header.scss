@@ -15,10 +15,49 @@
   position: absolute;
   top: 0;
   left: 50%;
+  z-index: 3;
   transform: translateX(-50%);
   @include desk {
     padding-left: 46px;
   }
+}
+
+.tab-menu__btn {
+  display: none;
+  padding: 0 37px;
+  width: 160px;
+  height: 44px;
+  border-radius: 22px;
+  background-color: #ffffff;
+  color: $fourthColor;
+
+  @include font;
+  @include text(16px, 700, 21px);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.31;
+  margin-left: 30px;
+  transition-property: background-color;
+  transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tab {
+    display: flex;
+    align-items: center;
+    &:hover,
+    &:focus {
+      background-color: #ecebeb;
+    }
+  }
+  @include desk {
+    margin-left: auto;
+  }
+}
+
+.btn__icon {
+  width: 16px;
+  height: auto;
+  margin-left: 2px;
+  fill: currentColor;
 }
 
 .nav__burger {
