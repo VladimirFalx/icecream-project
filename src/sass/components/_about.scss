@@ -1,0 +1,171 @@
+.about {
+  position: relative;
+  background-color: #fff5f6;
+  padding-top: 125px;
+  padding-bottom: 0px;
+  @include tab {
+    padding-top: 130px;
+    padding-bottom: 0px;
+  }
+  @include desk {
+    padding-top: 125px;
+    padding-bottom: 129px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  @include tab {
+    max-width: 768px;
+  }
+  @include desk {
+    max-width: 1280px;
+  }
+}
+
+.about__wrap {
+  position: relative;
+  width: 220px;
+  z-index: 2;
+  margin: 0 auto;
+  @include tab {
+    padding-left: 357px;
+    padding-top: 100px;
+    width: 100%;
+  }
+  @include desk {
+    padding-left: 587px;
+    margin: 0 auto;
+  }
+}
+
+.image__milk {
+  position: absolute;
+  bottom: 100px;
+  @include tab {
+    display: none;
+  }
+  @include desk {
+    display: block;
+    bottom: -100px;
+  }
+}
+
+.image__cow {
+  margin-bottom: 46px;
+  margin: 0 auto;
+  @include tab {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    height: 340px;
+    width: 340px;
+  }
+  @include desk {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    height: 516px;
+    width: 516px;
+  }
+}
+
+.about__pre--title {
+  @include text(18px, normal, 21px);
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffa5ba;
+  margin-bottom: 15px;
+  @include tab {
+    @include text(26px, normal, 30px);
+    margin-bottom: 16px;
+  }
+  @include desk {
+    @include text(30px, normal, 34px, 0.04em);
+  }
+}
+
+.about__title {
+  @include text(34px, normal, 39px, 0.04em);
+  text-transform: uppercase;
+  color: #d41443;
+  text-align: center;
+  margin-bottom: 26px;
+  @include tab {
+    @include text(48px, normal, 55px, 0.04em);
+    margin-bottom: 0;
+  }
+  @include desk {
+    @include text(58px, normal, 66px, 0.06em);
+  }
+}
+
+.about__text--top {
+  @include font;
+  @include text(12px, null, 19px);
+  color: #000000;
+  margin: 46px 15px 40px 15px;
+  @include tab {
+    @include text(14px, null, 25px);
+    margin: 0 0 35px 0;
+  }
+  @include desk {
+    @include text(16px, normal, 28px, 0.04em);
+  }
+}
+
+.about__text--bottom,
+.about__text--down {
+  @include font;
+  @include text(12px, null, 19px);
+  color: #907e82;
+  margin-left: 15px;
+  margin-right: 15px;
+  @include tab {
+    @include text(14px, null, 25px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @include desk {
+    @include text(14px, null, 27px, 0.04em);
+  }
+}
+
+.about__text--down {
+  margin: 10px 15px 17px 15px;
+  @include tab {
+    margin: 20px 0 45px 0;
+  }
+}
+
+.about__button {
+  background-color: #ffffff;
+  border-radius: 22px;
+  margin-left: 15px;
+  font-family: DM Sans;
+  @include text(14px, bold, 18px);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #d41443;
+  width: 176px;
+  height: 44px;
+  @include animation;
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+  @include tab {
+    @include text(16px, bold, 21px);
+    margin: 0;
+  }
+}
+
+.button-svg {
+  width: 8px;
+  height: 8px;
+  fill: #d41342;
+}
